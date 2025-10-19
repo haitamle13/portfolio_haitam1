@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>') no-repeat center bottom;
+            background-size: cover;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #fff, #f8f9fa);
+            color: #667eea;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #f8f9fa, #fff);
+        }
+        .about-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #667eea;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        .section-title {
+            color: #333;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+            font-weight: 600;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #764ba2;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .skill-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Développeur passionné par les nouvelles technologies</p>
+            <a href="cv.html" class="btn btn-primary">Voir mon CV</a>
+            <a href="skills.html" class="btn btn-outline-light ms-3">Mes Compétences</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="images/haitam.jpeg" alt="Photo de profil" class="profile-image mx-auto d-block">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">À propos de moi</h2>
+                    <p>Je suis un développeur passionné avec une expertise dans le développement web et mobile. Mon objectif est de créer des solutions innovantes et efficaces qui répondent aux besoins des utilisateurs.</p>
+                    <p>Avec plusieurs années d'expérience dans le domaine, je maîtrise diverses technologies et frameworks modernes.</p>
+                    <div class="mt-4">
+                        <a href="about.html" class="btn btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Preview Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Compétences clés</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                    <h4>Développement Web</h4>
+                    <p>HTML, CSS, JavaScript, React, Spring Boot</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h4>Développement Mobile</h4>
+                    <p>React Native, Flutter, Android</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                    <h4>Bases de données</h4>
+                    <p>MySQL, MongoDB, PostgreSQL</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="skills.html" class="btn btn-primary">Voir toutes mes compétences</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h4>Développement Web</h4>
+                        <p>Création d'applications web modernes et responsives avec les dernières technologies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <i class="fas fa-mobile-alt skill-icon"></i>
+                        <h4>Applications Mobiles</h4>
+                        <p>Développement d'applications natives et hybrides pour iOS et Android.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h4>Base de Données</h4>
+                        <p>Conception et optimisation de bases de données performantes et sécurisées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Projets récents</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet E-commerce</h5>
+                            <p class="card-text">Plateforme de vente en ligne développée avec Spring Boot et React.</p>
+                            <a href="#" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Application Mobile</h5>
+                            <p class="card-text">Application de gestion de tâches développée avec React Native.</p>
+                            <a href="#" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">API REST</h5>
+                            <p class="card-text">API RESTful pour la gestion des utilisateurs avec Spring Boot.</p>
+                            <a href="#" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <div class="container text-center">
+            <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                <i class="fas fa-envelope me-3"></i>Contact
+            </h2>
+            <p class="lead mb-4" style="font-size: 1.2rem; opacity: 0.9;">Je suis ouverte à toute opportunité de stage ou collaboration dans les domaines IA, Data ou développement Full Stack.</p>
+            <a href="mailto:haitamfaddi07@gmail.com" class="btn btn-light btn-lg" style="padding: 15px 30px; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;" onclick="copyEmail()">
+                <i class="fas fa-envelope me-2"></i>haitamfaddi07@gmail.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Portfolio. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="https://github.com/haitamle13" class="text-white me-3" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/haitam-faddi-458991306" class="text-white me-3" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:haitamfaddi07@gmail.com" class="text-white me-3"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copyEmail() {
+            const email = 'haitamfaddi07@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email copié : ' + email);
+            }).catch(() => {
+                alert('Copie échouée, mais voici l\'email : ' + email);
+            });
+        }
+    </script>
+</body>
+</html>

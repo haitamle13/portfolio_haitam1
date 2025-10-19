@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        .cv-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cv-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            color: #333;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #764ba2;
+        }
+        .sidebar {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+        .sidebar h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .sidebar .text-muted {
+            color: rgba(255,255,255,0.8) !important;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        .main-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .skill-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .certificate-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .certificate-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .cv-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-user-circle me-2"></i>
+                Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cv.html">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="certificates.html">Certificats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container py-5" style="margin-top: 80px;">
+            <div class="row">
+                <!-- Sidebar with personal info -->
+                <div class="col-lg-4">
+                    <div class="cv-section">
+                        <div class="text-center mb-4">
+                            <img src="images/haitam.jpeg" alt="Photo de profil" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                            <h2>Haitam FADDI</h2>
+                            <p class="text-muted">ÉLÈVE INGÉNIEUR</p>
+
+                            
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-user me-2"></i>Informations personnelles</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-envelope me-2"></i>haitamfaddi07@gmail.com</li>
+                                <li><i class="fas fa-phone me-2"></i>0619328723</li>
+                                <li><i class="fas fa-map-marker-alt me-2"></i>Casablanca,Maroc</li>
+                                <li><i class="fas fa-birthday-cake me-2"></i>31 Janvier 2004</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-graduation-cap me-2"></i>Formation</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>École Marocaine des sciences de l'ingénieur (EMSI)</strong><br>5ème année Cycle d'Ingénieur (2021-2025)</li>
+                                <li><strong>Groupe scolaire ALASSLA</strong><br>Baccalauréat option physique chimie - Mention : Bien (2020-2021)</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-certificate me-2"></i>Certificats & Soft Skills</h5>
+                            <ul class="list-unstyled">
+                                <li>People and Soft Skills Assessment (IBM via Coursera)</li>
+                                <li>Introduction à la programmation orientée objet (en C++) (EPFL via Coursera)</li>
+                                <li>HTML, CSS, and Javascript for Web Developers (Johns Hopkins University via Coursera)</li>
+                                <li>The Arduino Platform and C Programming (University of California, Irvine via Coursera)</li>
+                                <li>Impact Measurement & Management for the SDGs (Duke University via Coursera)</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-language me-2"></i>Langues</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>Anglais</strong></li>
+                                <li><strong>Français</strong></li>
+                                <li><strong>Arabe</strong></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5><i class="fas fa-download me-2"></i>Télécharger</h5>
+                            <a href="file:///C:/Users/Ba9ar/Downloads/Haitam-FADDI-FlowCV-Resume-20251019%20(3).pdf" class="btn btn-primary btn-sm" download>
+                                <i class="fas fa-download me-2"></i>Télécharger CV (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main content -->
+                <div class="col-lg-8">
+                    <!-- Profile & Objectives -->
+                    <div class="cv-section">
+                        <h3 class="section-title">Profil & Objectifs</h3>
+                        <p>Élève Ingénieur dynamique, ambitieux et doté d'une capacité d'adaptation innée, spécialisé dans le développement d'applications logicielles. Motivé par l'intégration dans des équipes projets dynamiques et la mise en œuvre de technologies modernes et innovantes. Je possède d'excellentes compétences en communication et un fort sens de l'initiative et du travail en équipe, des atouts recherchés pour le poste.</p>
+                    </div>
+
+                    <!-- Professional Experiences -->
+                    <div class="cv-section">
+                        <h3 class="section-title">Expériences Professionnelles</h3>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h5>Stage Développeur Web - Python/Django</h5>
+                                    <p class="text-muted">Soread 2M • Juillet - Août 2024</p>
+                                </div>
+                            </div>
+                            <p><strong>Description de la mission :</strong></p>
+                            <p>Développement d'une application web pour la gestion des visiteurs et la sécurité des accès au site de l'entreprise. Conception de la plateforme (enregistrements, suivi des entrées/sorties) en utilisant Python et le framework Django.</p>
+                        </div>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="cv-section">
+                        <h3 class="section-title">Projets Techniques & Innovation</h3>
+                        <div class="mb-3">
+                            <h6>Intégration d'un Chatbot IA basé sur LLAMA</h6>
+                            <p><strong>Technologies utilisées :</strong> JAVA, SPRINGBOOT, POSTGRESQL</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Application de Voyage</h6>
+                            <p>Développement full-stack d'une plateforme de gestion.</p>
+                            <p><strong>Technologies utilisées :</strong> JAVA, SPRINGBOOT, POSTGRESQL</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Plateforme E-commerce et Site de Location de Voiture</h6>
+                            <p>Conception de systèmes web transactionnels.</p>
+                            <p><strong>Technologies utilisées :</strong> PYTHON, DJANGO, SQLITE</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Application Mobile Quiz</h6>
+                            <p><strong>Technologies utilisées :</strong> ANDROID STUDIO, FIREBASE</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Système de Gestion des Hospitalisations</h6>
+                            <p>Programmation Orientée Objet.</p>
+                            <p><strong>Technologies utilisées :</strong> C++</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Portfolio. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#" class="text-white me-3"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
