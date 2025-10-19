@@ -7,10 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 120px 0;
+            padding: 100px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -22,8 +27,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>') no-repeat center bottom;
-            background-size: cover;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,0 1000,100 0,50"/></svg>');
+            animation: move 20s infinite linear;
+        }
+        @keyframes move {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         .hero-section h1 {
             font-size: 3.5rem;
@@ -38,54 +47,59 @@
             opacity: 0.9;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
-        .btn-primary {
-            background: linear-gradient(45deg, #fff, #f8f9fa);
-            color: #667eea;
+        .btn-modern {
+            background: linear-gradient(45deg, #667eea, #764ba2);
             border: none;
-            padding: 15px 35px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            animation: fadeInUp 1s ease-out 0.4s both;
+            padding: 12px 30px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            background: linear-gradient(45deg, #f8f9fa, #fff);
+        .btn-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102,126,234,0.3);
         }
         .about-section {
             padding: 100px 0;
             background: #f8f9fa;
         }
         .profile-image {
-            width: 280px;
-            height: 280px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid #667eea;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            border: 5px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s;
         }
         .profile-image:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
         .section-title {
-            color: #333;
-            border-bottom: 4px solid #667eea;
-            padding-bottom: 15px;
-            margin-bottom: 50px;
-            font-weight: 600;
+            font-weight: 700;
             position: relative;
+            margin-bottom: 40px;
         }
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: #764ba2;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #667eea;
+        }
+        .service-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         .card {
             border: none;
@@ -112,6 +126,13 @@
         .skill-icon {
             font-size: 3rem;
             margin-bottom: 15px;
+        }
+        .social-links a {
+            transition: all 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: #667eea !important;
         }
         @keyframes fadeInUp {
             from {
